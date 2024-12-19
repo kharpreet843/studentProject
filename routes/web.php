@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('students', StudentController::class)->names('students');
+Route::resource('students', StudentController::class)->middleware('auth')->names('students');
 
 Auth::routes();
 
